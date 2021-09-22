@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		EB73579626F53289002FCC7E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73579526F53289002FCC7E /* DetailsViewController.swift */; };
 		EB73579926F58284002FCC7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB73579826F58284002FCC7E /* MapKit.framework */; };
+		EB73579B26F625E2002FCC7E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73579A26F625E2002FCC7E /* EditViewController.swift */; };
+		EB73579E26F6423E002FCC7E /* LocationData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB73579C26F6423E002FCC7E /* LocationData.xcdatamodeld */; };
+		EB7357A326F6442D002FCC7E /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7357A126F6442D002FCC7E /* Location+CoreDataClass.swift */; };
+		EB7357A426F6442D002FCC7E /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7357A226F6442D002FCC7E /* Location+CoreDataProperties.swift */; };
+		EB7357A626F6D847002FCC7E /* Funtions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7357A526F6D847002FCC7E /* Funtions.swift */; };
 		EBAA1BC526F1234A0030ECE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA1BC426F1234A0030ECE6 /* AppDelegate.swift */; };
 		EBAA1BC726F1234A0030ECE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA1BC626F1234A0030ECE6 /* SceneDelegate.swift */; };
 		EBAA1BC926F1234A0030ECE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA1BC826F1234A0030ECE6 /* ViewController.swift */; };
@@ -20,6 +25,11 @@
 /* Begin PBXFileReference section */
 		EB73579526F53289002FCC7E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		EB73579826F58284002FCC7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EB73579A26F625E2002FCC7E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		EB73579D26F6423E002FCC7E /* LocationData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationData.xcdatamodel; sourceTree = "<group>"; };
+		EB7357A126F6442D002FCC7E /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EB7357A226F6442D002FCC7E /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EB7357A526F6D847002FCC7E /* Funtions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funtions.swift; sourceTree = "<group>"; };
 		EBAA1BC126F1234A0030ECE6 /* Lab Test 2 App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab Test 2 App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBAA1BC426F1234A0030ECE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBAA1BC626F1234A0030ECE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB210FA126FA8A07006DFC07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB7357A126F6442D002FCC7E /* Location+CoreDataClass.swift */,
+				EB7357A226F6442D002FCC7E /* Location+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EB73579726F58284002FCC7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +89,7 @@
 		EBAA1BC326F1234A0030ECE6 /* Lab Test 2 App */ = {
 			isa = PBXGroup;
 			children = (
+				EB210FA126FA8A07006DFC07 /* Model */,
 				EBAA1BC426F1234A0030ECE6 /* AppDelegate.swift */,
 				EBAA1BC626F1234A0030ECE6 /* SceneDelegate.swift */,
 				EBAA1BC826F1234A0030ECE6 /* ViewController.swift */,
@@ -78,6 +98,9 @@
 				EBAA1BCF26F1234B0030ECE6 /* LaunchScreen.storyboard */,
 				EBAA1BD226F1234B0030ECE6 /* Info.plist */,
 				EB73579526F53289002FCC7E /* DetailsViewController.swift */,
+				EB73579A26F625E2002FCC7E /* EditViewController.swift */,
+				EB73579C26F6423E002FCC7E /* LocationData.xcdatamodeld */,
+				EB7357A526F6D847002FCC7E /* Funtions.swift */,
 			);
 			path = "Lab Test 2 App";
 			sourceTree = "<group>";
@@ -152,10 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7357A426F6442D002FCC7E /* Location+CoreDataProperties.swift in Sources */,
+				EB7357A326F6442D002FCC7E /* Location+CoreDataClass.swift in Sources */,
+				EB73579B26F625E2002FCC7E /* EditViewController.swift in Sources */,
 				EBAA1BC926F1234A0030ECE6 /* ViewController.swift in Sources */,
 				EBAA1BC526F1234A0030ECE6 /* AppDelegate.swift in Sources */,
 				EBAA1BC726F1234A0030ECE6 /* SceneDelegate.swift in Sources */,
+				EB73579E26F6423E002FCC7E /* LocationData.xcdatamodeld in Sources */,
 				EB73579626F53289002FCC7E /* DetailsViewController.swift in Sources */,
+				EB7357A626F6D847002FCC7E /* Funtions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +385,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EB73579C26F6423E002FCC7E /* LocationData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB73579D26F6423E002FCC7E /* LocationData.xcdatamodel */,
+			);
+			currentVersion = EB73579D26F6423E002FCC7E /* LocationData.xcdatamodel */;
+			path = LocationData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EBAA1BB926F1234A0030ECE6 /* Project object */;
 }
